@@ -1,5 +1,7 @@
 import type { Equal, Expect } from '@type-challenges/utils'
 
+type TupleToObject<T extends readonly any[]> = { [P in T[number]]: P }
+
 const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
 const tupleNumber = [1, 2, 3, 4] as const
 const tupleMix = [1, '2', 3, '4'] as const
